@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--配置需要扫描的包、逗号隔开-->
+    <!--等同于@Configuration-->
+    <context:component-scan base-package="com.qianfeng.ioc,com.qianfeng.coffee,com.qianfeng.tea"></context:component-scan>
+
+    <!--凡是需要SpringIoc管理的类、都需要配置到xml文件中-->
+    <!--id是自定义的唯一标识-->
+    <!--class是Java类的路径:包名 + 类名-->
+    <!--注意：bean只能定义类、不能是抽象的或者接口-->
+    <!--<bean id="" class=""></bean>-->
+
+    <!--<bean id="" class="">-->
+        <!--&lt;!&ndash;property配置属性、name是MaLeader类型的全局属性&ndash;&gt;-->
+        <!--&lt;!&ndash;ref(references)关联bean的id的配置&ndash;&gt;-->
+        <!--&lt;!&ndash;这种关联告诉Spring需要通过id为greenTeaWater的bean创建对象、并且注入到water属性中&ndash;&gt;-->
+        <!--&lt;!&ndash;name与全局变量（setxxx方法后面的字段名一致）&ndash;&gt;-->
+        <!--<property name="" ref=""></property>-->
+    <!--</bean>-->
+
+</beans>
